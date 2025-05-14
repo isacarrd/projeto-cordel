@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+*{
+/*Box model stuff*/
+margin: 0;
+padding:0;
+/*Typography stuff*/
+font-size: 1em;
+}
+html, body{
+  min-height: 100vh; 
+  font-family: var(--fonte1);
+}
+
+@font-face {
+  font-family: 'Passion One';
+  src: url(/font/Passion_One/PassionOne-Regular.ttf) format(truetype);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+
+:root{
+/*Miscellaneous*/
+  --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+  --fonte2: 'Passion One', cursive;
+  --fonte3: 'Sriracha', cursive;
+}
+
+header{
+/*Box model stuff*/
+  background-color: black;
+/*Typography stuff*/
+  text-align: center;
+  color: white;
+}
+header h1{
+/*Box model stuff*/
+  padding-top: 50px;
+/*Typography stuff*/
+  font-family: var(--fonte2);
+  font-size: 10vw;
+  font-size: 80px;
+  font-variant:small-caps;
+}
+header a:hover, footer a:hover{
+  /*Typography stuff*/
+  text-decoration: underline;
+}
+header p{
+  /*Box model stuff*/
+  padding-bottom: 50px;
+  /*Typography stuff*/
+  font-family: var(--fonte1);
+}
+
+a{
+/*Typography stuff*/
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+}
+
+section{
+  font-family: var(--fonte3);
+  font-size: 2em;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  line-height: 2em;
+  padding-left: 30px
+}
+section > p{
+  padding-bottom: 2em;
+}
+
+@media (max-width: 600px) {
+  section > p{
+    font-size: 0.6em;
+    line-height: 1.8em;
+  }
+}
+
+section.normal {
+  background-color: white;
+  color: black;
+}
+section.imagem{
+  background-color: rgb(51, 51, 51);
+  color: white;
+  box-shadow: inset 6px 6px 13px 0px #00000058;
+  background-size: cover;
+  background-attachment: fixed; /* responsável pelo efeito parallax*/
+}
+section.imagem > p{
+  display: inline-block;
+  padding: 5px;
+  background-color: #00000064;
+  text-shadow: 1px 3px 5px black;
+}
+
+section#img1{
+  background-image: url(/imagens/background001.jpg);
+  background-position: right center;
+}
+section#img2{
+  background-image: url(/imagens/background002.jpg);
+  background-position: right center;
+}
+
+footer{
+/*Box model stuff*/
+  padding: 15px;
+  background-color: black;
+/*Typography stuff*/
+  font-family: var(--fonte1);
+  font-size: medium;
+  text-align: center;
+  color: white;
+}
